@@ -1,0 +1,36 @@
+ul.trainingen    { border: solid 0px gray; width: 410px; }
+ul.trainingen li { height: 20px; margin: 0px 0 2px 0; width: 350px; border: solid 0px gray; } 
+ul.trainingen li { padding: 4px 0 0 25px; list-style-type:none; background:url(../images/circle.ico) 0px 4px no-repeat; }
+ul.trainingen a { border: 0px solid blue; position: relative; top: -15px; left: 340px;   }
+
+/* IE inline-block http://www.adobe.com/cfusion/communityengine/index.cfm?event=showdetails&productId=1&postId=2661 */
+
+/* div#bg          { position: relative; } */
+/* img#background  { width: 110%; height: 115%; }
+img#background  { position: absolute; top: -30px; left: -25px; } */
+img#background  { display: block; z-index: -3; margin: -20px 0px; padding: 0 2px; border: 4px solid #333; } /* padding: 0 2px; */
+
+.full_page { text-align: left; width: 65em; margin: 0px auto; }
+
+td.yaxis1       {width: 150px; border-top: 0px solid #ccc;}
+td.topleft      {width: 250px; border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-bottom: 1px solid #555; }
+td.topright     {width: 250px; border-top: 1px solid #ccc; border-left: 1px solid #555; border-bottom: 1px solid #555; border-right: 1px solid #ccc;}
+px solid #ccc;}
+ul.trainingen    { border: solid 0px gray; width: 410px; }
+ul.trainingen li { height: 20px; margin: 0px 0 2px 0; width: 350px; border: solid 0px gray; } 
+ul.trainingen li { padding: 4px 0 0 25px; list-style-type:none; background:url(../images/circle.ico) 0px 4px no-repeat; }
+ul.trainingen a { border: 0px solid blue; position: relative; top: -15px; left: 340px;   }
+
+/* IE inline-block http://www.adobe.com/cfusion/communityengine/index.cfm?event=showdetails&productId=1&postId=2661 */
+
+/* div#bg          { position: relative; } */
+/* img#background  { width: 110%; height: 115%; }
+img#background  { position: absolute; top: -30px; left: -25px; } */
+img#background  { display: block; z-index: -3; margin: 0px 0px; padding: 20px 2px; border: 4px solid #333; } /* padding: 0 2px; */
+
+.full_page { text-align: left; width: 65em; margin: 0px auto; }
+
+td.yaxis1       {width: 150px; border-top: 0px solid #ccc;}
+td.topleft      {width: 250px; border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-bottom: 1px solid #555; }
+td.topright     {width: 250px; border-top: 1px solid #ccc; border-left: 1px solid #555; border-bottom: 1px solid #555; border-right: 1px solid #ccc;}
+px solid #ccc;}

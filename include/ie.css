@@ -1,0 +1,13 @@
+ul#change {display: block; float: none; padding: 0; margin: 0;}
+ul#change li div.left, ul#includeexclude li div.left    { width: 720px; }
+ul#change li div.right, ul#includeexclude li div.right  { width: 180px; }
+ul#change li, ul#includeexclude li  { clear: left; width: 900px; }
+ul#premiers { width: 600px; margin: 0 auto;}
+ul#premiers li { display: inline-block; overflow: hidden; margin-right: 6px; border: 5px solid #DDD; float: left; }
+div.barholder   { float: left; width: 425px; border: 1px solid #ddd; margin-right: 20px;  }
+ul#change li div.right div .changevote {margin: 0; }
+ul#includeexclude li div.left {width: 700px; }
+ul#includeexclude li div.right {}
+ul#includeexclude {padding: 0; margin: 0; }
+
+

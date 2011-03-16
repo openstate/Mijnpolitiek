@@ -1,0 +1,9 @@
+
+RewriteEngine on
+Options +FollowSymLinks
+
+#RewriteCond %{HTTP_HOST} ^mijncoalitie.nl [NC]
+#RewriteRule ^(.*)$ http://www.mijncoalitie.nl/$1 [L,R=301]RewriteCond %{HTTP_HOST} ^mijncoalitie.nl$ [OR]
+RewriteCond %{HTTP_HOST} ^www.mijncoalitie.nl$
+RewriteRule ^/?$ "http\:\/\/www\.mijncoalitie\.nl\/index\.php" [R=301,L]
+

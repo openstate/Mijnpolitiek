@@ -1,0 +1,216 @@
+/* #   You may use this code provided this header is not removed    # */
+/* #                         2009                                   # */
+/* #############             Enjoy this Code               ########## */
+
+
+body { padding: 0px; background-color: #fff; color: #333; margin: 0px; }   /* #E9E9E9 */
+body { font: small Arial, Helvetica, Verdana, sans-serif; font-size: 12px; }
+body { /* height: 100%; */ min-height: 600px; }
+
+.container { text-align: left; width: 960px; margin: 0px auto; padding: 0;   }
+
+div#bg          { position: relative; background: #eee;}
+img#background  { width: 110%; height: 110%; }
+img#background  { position: absolute; top: -30px; left: -35px; }
+img#background  { display: block; z-index: -3;   }  /* margin: -20px 2px;  */
+
+.h160      { height: 160px; }
+
+.clearright { clear: right; }
+.floatright { float: right; }
+.floatleft { float: left; }
+.floatcenter { margin: 0px auto; }   /* margin: 15px auto; */
+.aligntext { vertical-align: baseline; }
+
+img { border: 0px; }
+ul, li { list-style-type: none; }
+img.client { width: 60px; height: auto; margin: 5px 25px; }
+img.info   { width: 14px; border: 0px solid red; }
+img.logo   { margin-top: 0px; }
+img.logo2   { margin: auto auto 25px 10px; }
+
+h1 { font-size: 1.45em; font-weight: bold; font-weight: 100; }
+h2 { font-size: 1.1em; margin: 5px 0; font-weight: 100;}
+h3 { font-size: 1.0em; margin: 5px 0; }
+h4 { font-size: 0.9em; margin: 5px 0; color: orange; }
+p  { margin: 8px 0; }
+p.intro {line-height: 1.4em; font-size: 2em; font-weight: 100; }
+p.intro a {color: #FF0000; }
+p.intro a:hover { text-decoration: none; }
+
+.overlap_header { height: 60px; background: #FF0000 url(/images/logo.gif) no-repeat 15px 5px; width: 200px; height: 75px; }
+.overlap_header { padding: 15px 0 0 0px; }
+.overlap_header a.mijn-coalitie { color: #fff; text-decoration: none; font-size: 30px; margin-left: 30px;   }
+.overlap_header { width: 100%; }
+.overlap_header { }
+
+.menu_blok { background-color: transparent; }
+.menu_blok { color: #fff; text-align: center; }
+.menu_blok { height: 25px; font-size: 0.8em; font-weight: bold; display: block; display: inline; }  /* width: 100%; */
+.menu_blok { padding: 10px 0px 0px 0px; margin: 0px 0px 0px 0px; }                                      		/*  position: absolute;	bottom: 0px;  */
+.menu_blok {  }
+
+.menu_blok .current { background: url(../images/current-item-blue-80-square.gif) no-repeat bottom right;} /* font-style: italic;  */
+/* .menu_blok .current { background: url(../images/current-item-blue-80-square.gif) no-repeat bottom right;}*/  /* font-style: italic;  */
+
+.menu_blok .current  { background: #FFF; color: #000; }
+.menu_blok ul 		 {	float: right; margin: 10px 20px 0 0; padding-left: 20px; text-align: center; list-style: none; }
+.menu_blok ul li	 {  }
+.menu_blok a 		 {  font-size: 1.6em; margin-bottom: 0px; display: inline-block; float: left; text-align: center; line-height: 24px; padding: 5px 8px; }  /* padding: 0px 10px;  */
+.menu_blok a	     {	color: #FFF; text-decoration: none; }
+.menu_blok a:hover   {	color: #000; text-decoration: none; background: #FFF;}  /* border-bottom: 2px solid #fff; */
+
+table   { border-collapse: collapse; }
+table tr { min-height: 40px; }
+#inhoud { width: auto; min-height: 360px; }  /*  height: auto;    -  width: auto; */
+/* #inhoud { border-left: dotted 1px #d11; border-right: dotted 1px #d11; }   /* red edges */
+#inhoud { margin: 15px 0 0 0; padding: 0px; background-color:#fff; line-height: 18px; }  /* padding: 30px 29px; height: auto; if not 29px: white linesat the sides!  */
+#inhoud { background: transparent; }
+
+.results          { width: 100%;}
+.results          { clear: both; }
+.results th       { font-size: 1.35em; font-weight: 100; }
+.results th, .results td { width: 50%; }
+.results th.coalitiepartijen, .results td.coalitiepartijen { width: 350px }
+.results th.coalitiepartijen1, .results td.coalitiepartijen1 { width: 210px }
+.results th    { padding: 15px 0 5px 150px; }
+.results th    { padding: 5px 20px; }
+.results td    { padding: 15px 25px; }
+.results td    { padding: 5px 25px 5px 0px; }
+.results td.right, .results th.right  { border-left: 0px; width: 600px; } /* meer dan de helft */
+
+.results td div.greenbox { margin: 0 auto; height: 80px; }
+.results td div.greenbox, .results td div.greenbox a { color: #fff; font-size: 24px; font-weight: 800; text-decoration: none; }
+.results  { font-size: 16px; font-weight: 800; padding: 5px 6px; }
+.results { font-size: 16px; font-weight: 100; padding: 5px 6px; }
+
+.greenbox       { background: #3eb62e; text-align: center; line-height: 30px; padding-top: 20px; }
+.greenbox a    { color: #fff; }
+
+#coalities      {border-top: 5px solid #000; background: #f6f6f6; border-bottom: 5px solid #000; margin-top: 0px; padding: 10px 20px; }
+#coalities h1   {font-size: 3em; font-weight: 100; text-align: center; }
+#coalities .kiezen {border: 1px solid #CCC; font-size: 2em; margin-bottom: 30px; }
+#coalities .midden {text-align: center; }
+#coalities .url {text-align: center; font-size: 1.4em; line-height: 1.5em;  }
+#coalities .logos {text-align: center; }
+#coalities .logos img {margin-right: 20px; }
+#coalities .logos img.social    { border: 5px solid #FFF; }
+#coalities .logos img.social:hover    { border: 5px solid #F00; }
+
+#delen {border-top: 0px solid #000; background: #f6f6f6; border-bottom: 5px solid #000; margin-top: 0px; padding: 10px 20px; }
+#delen h1 {font-size: 3em; font-weight: 100; text-align: center; margin-top: 10px; }
+.vanminister {width: 200px; height: 300px; overflow: hidden; margin: 0 auto; margin-bottom: 30px;}
+.vancoalitie {padding: 20px 0; width: 100%; background: #3eb62e;  margin-bottom: 30px;}
+.vancoalitie h1 { margin: 0; padding: 0; color: #FFF; }
+
+ 
+#greybox { padding: 0; margin: 0; height: auto; clear: left; }
+#greybox { margin-top: 20px; }
+div.top    { height: 22px;  background: #f6f6f6; border-top: 5px solid #000;  }
+#greybox, div.middle { background: #f6f6f6; }
+div.bottom { height: 60px;  border-bottom: 5px solid #000;; margin-top: 0; }
+div.bottomuitslag { height: 5px;  border-bottom: 5px solid #000;; margin-top: 0; }
+
+div.middle { }
+div.middle { height: auto; min-height: 80px; min-height: 200px; padding-left: 20px; padding-top: 10px;  }
+#vragen {border: 1px solid #CCC; }
+
+ul#steps     { width: 100%; font-size: 1.3em;  font-weight: bold; }
+ul#steps li  { background:url(../images/cirkel-grijs-30.gif) no-repeat 0 5px; line-height: 35px; }
+ul#steps li  { display: inline; padding: 10px 40px; color: #CCC; margin-right: 33px; }
+ul#steps li.current  { background:url(../images/cirkel-rood-30.gif) no-repeat 0 5px; color: #FF0000;}
+ul#steps li.image { background: none; margin: 0px 0 0 -40px; padding: 0px 0 0 0; clear: both; }
+ul#steps li.image img { padding-top: 10px; }
+
+ul.stelling { display: block; padding: 0; margin: 0; }
+li.stelling { color: #000; font-weight: bold; font-size: 1.3em; }
+ul li { display: inline; text-decoration: none; }
+ul li a.stelling { padding: 0 10px; color: #bbb; text-decoration: none; font-weight: bold; }
+ul li a.stelling.current { padding: 0 10px; text-decoration: none; font-weight: bold; color: #f00; color: #FF0000;  }
+ul li.selected, ul li.selected a { color: #555;}
+
+h1 { font-size: 1.7em; line-height: 140%; padding: 0px; margin-top: 0px;  }
+h2 { font-size: 1.5em; line-height: 140%; padding: 0px; margin-top: 15px;  }
+
+/* div.bottom input.yesno { display: inline-block; height: 40px; width: 100px;  margin: 0px 0px 0 20px; padding-bottom: 4px; }
+div.bottom input.yesno { color: #fff; font-weight: 500; font-size: 1.7em; font-family: arial; } 
+div.bottom input.yesno { background-image: url(../images/button-blauw-100.gif); background-color: transparent; border: 0; } */
+
+div.bottom      { padding: 0 20px;}
+div.bottom div .vote, div.bottom form, div.bottom div form input { display: inline-block; padding: 12px 10px;  margin: 0px 0px 0 20px;  text-align: center; }
+ul#change li div.right div .changevote, div.bottom div .vote { float: right; margin: 0px 20px 0 0px; width: 150px;}
+div.bottom div .vote.yes { float: right; margin: 0px 0px 0px 0px;}
+ul#change li div.right div .changevote.yes { float: left; margin-left: 20px; }
+div.bottom div .vote.no { float: left; margin: 0px 0px 0 0px;}
+ul#change li div.right div .changevote.no { float: left; margin-left: 20px; }
+ul#change li div.right div .changevote, div.bottom div .vote { color: #fff; font-weight: 100; font-size: 3em; text-decoration: none; }  /* background-color: #2295c9;  */
+div.bottom div .vote, div.bottom div .changevote  { background: #48b5e7; border: 0; }
+ul#change li div.right div .changevote { font-size: 14px; display: inline-block; height: 28px; width: 70px; padding-top: 6px;  margin: 0 0 0 20px;  text-align: center; }
+ul#change li div.right div .changevote { background: #3eb62e; border: 0;}
+ul#change li div.right div .changevote.unselected { background: #DDD; color: Black;}
+
+.middle h2 {font-size: 3em; padding-right: 20px; margin-top: 15px; padding-top: 15px; }
+
+div.bottom div .changevote:hover, div.bottom div .vote:hover, div.bottom form a.yesno:hover,#greybox div.bottom form input.yesno:hover    { position: relative; left: 3px; top: 3px; cursor: pointer; }
+div.bottom div .changevote:active, div.bottom div .vote:active, div.bottom form a.yesno:active, #greybox div.bottom form input.yesno:action { position: relative; left: 5px; margin-top: 5px; cursor: pointer; text-decoration: underline; }
+
+
+div.barholder   { float: left; width: 450px; border: 1px solid #ddd; margin-right: 20px;  }
+div.bar         { height: 30px; z-index: 1; line-height: 30px; padding-left: 10px; color: #fff; font-size: 16px; font-weight: 100; }
+#legenda        { text-align: right; border: 1px dotted #ccc; display: inline; padding: 7px 5px 4px 0; float: right; }
+div.box { display: inline-block; height: 16px; width: 16px; margin-left: 20px; margin-right: 8px; }
+
+.green { background: #3eb62e; }
+.yellow { background: #FFCC00; }
+.red { background: #F00; } /* AZW "float: " verwijderd */
+
+h2.aanpassen {font-size: 2em; color: #FF0000; padding: 0; margin: 0 0 8px 0;  }
+
+
+/* div.barholder   { background: blue url(../images/rounded-bar-end-40.gif) no-repeat left; z-index: 5; } */
+
+ul#includeexclude {display: none; display: block; } /* AZw 20100608 */
+ul#change, ul#includeexclude, ul#kiesbaas, ul#premiers { padding: 0; padding-left: 0px; background: transparent; cursor: pointer; }
+ul#change li, ul#includeexclude li  { display: block; padding: 0; margin: 0; clear: right; float: left; font-weight: 100; }
+ul#change li, ul#includeexclude li  { vertical-align:text-top; font-weight: 100; }
+li h2                               { line-height: 36px; font-size: 2em; color: red; }
+li h3, h3.warning                   { line-height: 30px; font-size: 16px; padding-right: 20px; font-weight: 100; }
+h3.warning                          { color: red; text-align: center; }
+ul#change li div.left, ul#includeexclude li div.left       { float: left; display: inline-block; }
+ul#change li div.right, ul#includeexclude li div.right     { float: left; display: inline-block;  margin-top: 4px; }
+/* ul#includeexclude li div.left {  width: 690px; } ul#includeexclude li div.right { width: 230px; } */
+ul#change li div.left, ul#includeexclude li div.left    { width: 722px; }
+ul#change li div.right, ul#includeexclude li div.right  { width: 180px; }
+
+div.right select         { width: 180px; height: 25px; font-size: 15px; border: 0; padding-top: 0px; margin-left: 20px; vertical-align: middle; }
+div.right select#include { color: Black; }
+div.right select#exclude { color: Black; }
+ul#change li div.right div { float: left; display: inline; }
+
+#stuur {background: #000; color: White; font-size: 2.6em; font-weight: 100; text-align: center; padding: 20px; margin: 10px 0 15px 0;}
+#stuur:hover {background: #3eb62e; }
+#stuur a {color: #FFF; text-decoration: none; }
+#stuur a:hover {color: #FFF; text-decoration: underline; }
+
+b.link { font-size: 18px; }
+
+ul#premiers             { text-align: center; }
+ul#premiers li          { display: inline-block; overflow: hidden; margin-right: 6px; border: 5px solid #DDD; }
+ul#premiers li.clearright { clear:right; }
+ul#premiers li:hover    { border: 5px solid #F00; cursor: pointer;  }
+ul#premiers li.premier.selected    { border: 5px solid #F00; }
+ul#premiers li          { height: 180px; width: 130px; }
+ul#premiers li img      {  height: 180px; width: auto; width: 140px; height: auto; }
+
+#coalitie.selected      { border-bottom: 6px solid #F00; }
+
+
+/* ############## visibility uitschakelen voor aantal elementen ############ */
+ul#steps        { display: block;  }
+div.stelling    { display: block;  display: none;   } /* verberg alle vragen, toon ze met jqueryscript */
+#stelling0      { display: block; }  /* toon op home page welkomstboodschap */
+#ajax-loader    { display: inline-block; width: 1px; height: 1px; display: none; z-index: 99; position: relative; }
+#ajax-loader    { }
+#ajax-loader p  { }
+
+

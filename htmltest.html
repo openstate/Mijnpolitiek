@@ -1,0 +1,120 @@
+ SELECT * FROM `coalitiepeilingen` JOIN coalitiematch ON `coalitiematch`.`coalitieID` = `coalitiepeilingen`.`ID` JOIN coalitie ON `coalitiematch`.`coalitieID` = `coalitie`.`ID`
+            WHERE antwoordcombi = '126' AND laatste_peiling >75 ORDER BY matchrate DESC LIMIT 5
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+        <title></title>
+    <meta name="Author" content="Arend Zwaneveld Copyright 2009" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="include/styles.css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> <!-- http://api.jquery.com/hide/ -->
+    <script type="text/javascript">
+        var urldata =new Array();
+
+        $(document).ready ( function(){
+            $('#coalitie').change( function(){ // http://api.jquery.com/val/
+                var partij = $(this).val();
+                alert('coaltie #'+coalitie+' gekozen!');
+                //$.get("input2.php", { inclusief:'"'+partij+'"'} );
+                //$.get("input2.php", { inclusief: '"'+partij+'"'  }, function(msg){ alert( (msg.include) ); });
+
+            });
+
+
+
+       });
+    </script>
+</head>
+<body>
+<div class="container">
+   <div class="overlap_header" style="" >
+
+        <div class="menu_blok">
+          <ul><li><a href="index.php">Home</a></li><li><a href="index.php?start=1">Start</a></li><li><a href="over-mijn-coalitie.php">Over</a></li></ul>        </div>
+
+   </div>
+
+	<ul id="steps">
+            <li>Beantwoord de vragen</li>
+            <li>Stel jouw coalitie samen</li>
+            <li class="current">Deel jouw coalities met vrienden </li>
+        </ul>
+
+    <div id="coalities">
+
+	<h1>Kies de beste coalitie</h1>
+<!--	<center> -->
+            <select class="kiezen" id="coalitie">
+                <option value="-1">Kies coalitie uit de top 5</option>
+<option value="2197>VVD, PVV, GL, D66   (59%)</option>
+<option value="1474>PvdA, VVD, PVV, TON   (57%)</option>
+<option value="922>CDA, SP, VVD, PVV   (54%)</option>
+<option value="1377>PvdA, SP, VVD, PVV   (54%)</option>
+<option value="1015>CDA, VVD, PVV, D66   (52%)</option>
+            </select>
+<!--        </center> -->
+
+<h1>En wie moet het land gaan leiden?</h1>
+<ul id="premiers" >
+<li><img id="premier8" alt="Alexander Pechtold" class="premier 1" src="/images/premier/alexander-pechtold.jpg" /></li>
+<li><img id="premier3" alt="Emile Roemer" class="premier 2" src="/images/premier/emile-roemer.jpg" /></li>
+<li><img id="premier6" alt="Femke Halsema" class="premier 3" src="/images/premier/femke-halsema.jpg" /></li>
+
+<li><img id="premier5" alt="Geert Wilders" class="premier 4" src="/images/premier/geert-wilders.jpg" /></li>
+<div style="clear: both;"></div>
+<li><img id="premier1" alt="Jan Peter Balkenende" class="premier 5" src="/images/premier/jan-peter-balkenende.jpg" /></li>
+<li><img id="premier2" alt="Job Cohen" class="premier 6" src="/images/premier/job-cohen.jpg" /></li>
+<li><img id="premier4" alt="Mark Rutte" class="premier 7" src="/images/premier/mark-rutte.jpg" /></li>
+<li><img id="premier12" alt="Rita Verdonk" class="premier 8" src="/images/premier/rita-verdonk.jpg" /></li>
+</ul>
+
+
+<div style="clear: both;"></div>
+
+<h1>Share je coalitie!</h1>
+<p class="logos">
+<a href="http://twitter.com/home?status=Mijn+Coalitie%20-%20http%3A%2F%2Fwww.mijncoalite.nl%2F" alt="deel je coalitie met vrienden op twitter!" target="_blank"><img class="social" src="/images/twitter.gif" /></a>
+<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.mijncoalitie.nl%2F&t=Mijn+Coalitie" alt="deel je coalitie met vrienden op facebook!" target="_blank"><img class="social" src="/images/facebook.gif" /></a>
+<a href="http://www.hyves.nl/profilemanage/add/tips/?name=Mijn+Coalitie&text=+http%3A%2F%2Fwww.mijncoalitie.nl%2F&rating=5" alt="deel je coalitie met vrienden op hyves!" target="_blank"><img class="social" src="/images/hyves.gif" /></a>
+
+<a href="http://nujij.nl/jij.lynkx?t=Mijn+Coalitie&u=http%3A%2F%2Fwww.mijncoalitie.nl%2F&b=" alt="deel je coalitie met vrienden op nujij!" target="_blank"><img class="social" src="/images/nujij.gif" /></a>
+</p>
+<p class="url">Of gebruik onderstaande link voor je eigen netwerk, e-mail of tweet: <br />
+<b>http://www.mijncoalitie.nl/coalitie-van.php?87ds87d7sd7s</b></p>
+
+    </div>
+
+
+</div> <!-- container -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16775387-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,291 @@
+Array
+(
+    [1] => 1
+    [2] => 1
+    [3] => 1
+    [4] => 1
+    [5] => 1
+    [6] => 1
+    [7] => 1
+)
+<br />0<br />127
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+        <title></title>
+    <meta name="Author" content="Arend Zwaneveld Copyright 2009" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="include/styles.css" />
+
+
+
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> <!-- http://api.jquery.com/hide/ -->
+   <script type="text/javascript" src="/include/js/jquery.url.packed.js"></script> <!-- http://projects.allmarkedup.com/jquery_url_parser/index.php -->
+
+   <script type="text/javascript">
+
+        $(document).ready ( function(){
+           //$('li a.stelling').click( function(e){    e.preventDefault();   });  // http://stackoverflow.com/questions/970388/jquery-disable-a-link
+            $('.changevote').click( function(){
+                var stelling;
+                var antwoord;
+                if($(this).attr('title') == 'eens'){antwoord = 1; }
+                if($(this).attr('title') == 'oneens'){antwoord = 0; }
+                var p = $(this).parent(); // parent tag  http://stackoverflow.com/questions/521017/jquery-selecting-a-parent-attribute-from-a-callback
+                stelling = p.attr('id');
+
+                alert('Je hebt op knop '+antwoord+' gedrukt van formulier met id '+stelling+'!');
+                //$.get("input2.php", { stell:'"'+stelling+'"', antw:'"'+antwoord+'"' } );
+//                $.get("input2.php", { stell:'"'+stelling+'"', antw:'"'+antwoord+'"' }, function(returned_data){ alert(returned_data); } );  // http://api.jquery.com/jQuery.get/
+
+                $('#'+stelling+' .selected').removeClass('selected').addClass('unselected');
+                $(this).removeClass('unselected');
+                $(this).addClass('selected');
+
+              $.get("input2.php", { stell:'"'+stelling+'"', antw:'"'+antwoord+'"' },
+                    function(returned_data){
+                    //var antwoordcombi2 = returned_data;
+                    alert(returned_data);
+                    //window.location.replace('/mijncoalitie.php?coalitie2='+antwoordcombi2);
+                });
+/*
+              $.ajax({
+                    type: "POST",
+                    url: "input2.php",
+                    data: 'stell='+encodeURIComponent(stelling),
+                    dataType: 'json',
+                    beforeSend: function(x){$('#ajax-loader').css('visibility','visible');},
+                    success: function(msg){
+
+                    }
+                });
+*/
+
+            });
+
+             $('#include select').change( function(){ // http://api.jquery.com/val/
+                var partij = $(this).val;
+                alert(partij+'included!');
+            });
+
+            $('#exclude select').change( function(){  // http://api.jquery.com/val/
+                var partij = $(this).val;
+                alert(partij+'excluded');
+            });
+
+
+            $('.premier').click( function(){
+                alert($(this).attr('id'));
+            });
+
+
+
+       });
+
+    </script>
+</head>
+<body>
+<div class="container">
+   <div class="overlap_header" style="" >
+        <div class="menu_blok">
+          <ul><li><a href="index.php">Home</a></li><li><a href="index.php?start=1">Start</a></li><li><a href="over-mijn-coalitie.php">Over</a></li></ul>        </div>
+   </div>
+
+    <div id="inhoud">
+
+    <ul id="steps"><li>Beantwoord de vragen</li><li class="current">Stel jouw coalitie samen</li><li>Deel jouw coalities met vrienden </li></ul>
+
+
+    <div id="greybox">
+
+    	<div class="top"></div>
+
+        <div style="clear: both;"></div>
+
+        <div class="middle">
+<h2 class="aanpassen">Mogelijke coalities op basis van jouw voorkeuren</h2>
+<table id="intro" class="results">
+<tr>
+<td class="coalitiepartijen">CDA, PvdA, VVD, SGP </td>
+<td class="right"><div class="barholder"><div id="bar1" class="bar green" style="width: 60.7%;">60.7%</div></div>83 zetels*</td>
+</tr>
+<tr>
+<td class="coalitiepartijen">CDA, PvdA, VVD</td>
+<td class="right"><div class="barholder"><div id="bar1" class="bar green" style="width: 52.4%;">52.4%</div></div>81 zetels*</td>
+</tr>
+<tr>
+<td class="coalitiepartijen">PvdA, VVD, GL, CU </td>
+<td class="right"><div class="barholder"><div id="bar1" class="bar yellow" style="width: 50%;">50%</div></div>81 zetels*</td>
+</tr>
+<tr>
+<td class="coalitiepartijen">PvdA, SP, VVD, CU </td>
+<td class="right"><div class="barholder"><div id="bar1" class="bar yellow" style="width: 42.9%;">42.9%</div></div>78 zetels*</td>
+</tr>
+</tr></table>
+<div style="clear: both;"></div><ul id="change">
+<li><h2 class="aanpassen">Pas je vragen aan voor een andere coalitie</h2><li>
+<li>
+<div class="left q1"><h3>Het begrotingstekort moet door het komende kabinet worden weggewerkt.</h3></div>
+<div class="right">
+<div id="1" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+<li>
+<div class="left q2"><h3>De AOW-grens van 65 jaar moet blijven.</h3></div>
+<div class="right">
+<div id="2" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+<li>
+<div class="left q3"><h3>De verantwoordelijkheden van de koningin moeten beperkt worden.</h3></div>
+<div class="right">
+<div id="3" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+<li>
+<div class="left q4"><h3>Er mogen nieuwe kerncentrales worden gebouwd.</h3></div>
+<div class="right">
+<div id="4" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+<li>
+<div class="left q5"><h3>De kiezer moet meer invloed krijgen middels directe verkiezingen van burgemeesters of referenda.</h3></div>
+<div class="right">
+<div id="5" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+<li>
+<div class="left q6"><h3>De studiefinanciering mag worden verminderd.</h3></div>
+<div class="right">
+<div id="6" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+<li>
+<div class="left q7"><h3>De hypotheekrenteaftrek moet behouden worden.</h3></div>
+<div class="right">
+<div id="7" >
+<a href="" class="changevote yes  selected" title="eens">Eens</a>
+<a href="" class="changevote no  unselected" title="oneens">Oneens</a>
+</div>
+</div></li>
+
+</ul>
+<div style="clear: both;"></div><ul id="includeexclude">
+<li><h2 class="aanpassen">Partijkeuze</h2><li>
+<li>
+<div class="left q8"><h3>Is er een partij die g&eacute;&eacute;n onderdeel mag uitmaken van jouw coalitie?</h3></div>
+<div class="right">
+<select id="include">
+<option value="0">Geen bezwaar</option>
+<option value="1">CDA</option>
+<option value="7">CU</option>
+<option value="8">D66</option>
+<option value="6">GL</option>
+<option value="14">Heel NL</option>
+<option value="16">Lijst 17</option>
+<option value="13">M&S</option>
+<option value="11">Nieuw NL</option>
+<option value="15">P1</option>
+<option value="17">PP</option>
+<option value="2">PvdA</option>
+<option value="9">PvdD</option>
+<option value="5">PVV</option>
+<option value="10">SGP</option>
+<option value="3">SP</option>
+<option value="12">TON</option>
+<option value="4">VVD</option>
+</select>
+</div></li>
+
+<li>
+<div class="left q8"><h3>Welke partij mo&eacute;t onderdeel uitmaken van jouw coalitie?</h3></div>
+<div class="right">
+<select id="exclude">
+<option value="0">Geen voorkeur</option>
+<option value="1">CDA</option>
+<option value="7">CU</option>
+<option value="8">D66</option>
+<option value="6">GL</option>
+<option value="14">Heel NL</option>
+<option value="16">Lijst 17</option>
+<option value="13">M&S</option>
+<option value="11">Nieuw NL</option>
+<option value="15">P1</option>
+<option value="17">PP</option>
+<option value="2">PvdA</option>
+<option value="9">PvdD</option>
+<option value="5">PVV</option>
+<option value="10">SGP</option>
+<option value="3">SP</option>
+<option value="12">TON</option>
+<option value="4">VVD</option>
+</select>
+</div></li>
+
+</ul>
+<div style="clear: both;"></div><ul id="kiesbaas">
+<li><h2 class="aanpassen">De baas van het land</h2></li><li><h3>Maak een keuze uit een van de onderstaande gezichten. Wie moet Nederland gaan leiden?</h3></li></ul>
+<ul id="premiers">
+<li><img id="premier8" alt="Alexander Pechtold" class="premier" src="/images/premier/alexander-pechtold.jpg"></li>
+<li><img id="premier7" alt="André Rouvoet" class="premier" src="/images/premier/andre-rouvoet.jpg"></li>
+<li><img id="premier3" alt="Emile Roemer" class="premier" src="/images/premier/emile-roemer.jpg"></li>
+<li><img id="premier6" alt="Femke Halsema" class="premier" src="/images/premier/femke-halsema.jpg"></li>
+<li><img id="premier5" alt="Geert Wilders" class="premier" src="/images/premier/geert-wilders.jpg"></li>
+<li><img id="premier1" alt="Jan Peter Balkenende" class="premier" src="/images/premier/jan-peter-balkenende.jpg"></li>
+<li><img id="premier2" alt="Job Cohen" class="premier" src="/images/premier/job-cohen.jpg"></li>
+<li><img id="premier10" alt="Kees van der Staaij" class="premier" src="/images/premier/kees-van-der-staaij.jpg"></li>
+<li><img id="premier9" alt="Marianne Thieme" class="premier" src="/images/premier/marianne-thieme.jpg"></li>
+<li><img id="premier4" alt="Mark Rutte" class="premier" src="/images/premier/mark-rutte.jpg"></li>
+<li><img id="premier12" alt="Rita Verdonk" class="premier" src="/images/premier/rita-verdonk.jpg"></li>
+</ul>
+</div>	<div id="stuur">Deel deze uitslag met vrienden</div>
+ 		<div class="bottomuitslag"></div>
+        <div style="clear: both;"></div>
+
+          </div>
+
+
+
+</div>
+</div>
+<!-- </div>  container -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16775387-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
+
+
